@@ -4,6 +4,31 @@
 	<title></title>
 </head>
 <style type="text/css">
+    @keyframes boomerang-rotation {
+    	100% {
+    		transform: rotate(350deg);
+    	}
+    }
+    @keyframes boomerang-movement {
+    	0% {
+    		left: 0;
+    		top: 0;
+    	}
+    	25% {
+    		top: -80px;
+    	}
+    	50% {
+    		left: 400px;
+    	}
+    	75% {
+    		top: 80px;
+    	}
+    	100% {
+    		left: 0;
+    		top: 0;
+    	}
+    }
+
 	img
 	{
 		position: absolute;
@@ -16,13 +41,26 @@
 	{
 		transform: rotate(-10deg);
 	}
+	.boomerang
+	{
+		animation:
+			boomerang-rotation 3s infinite linear,
+			boomerang-movement 3s infinite ease-in-out;
+	}
+	.container
+	{
+		position: relative;
+		margin-top: 100px;
+	}
 
 
 </style>
 <body>
-<img src="i/11-0.jpg">
-<img src="i/22-0.jpg">
-<img src="i/33-0.jpg">
+<div class="container">
+	<img src="i/11-0.jpg">
+	<img src="i/22-0.jpg">
+	<img src="i/33-0.jpg" class="boomerang">
+</div>
 
 </body>
 </html>
