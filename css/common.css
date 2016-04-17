@@ -1,0 +1,44 @@
+.img
+{
+    position: absolute;
+    z-index: 1;
+}
+.img--boomerang
+{
+    animation: boomerang-movement 2s infinite ease-in-out;
+}
+.img--over
+{
+    z-index: 2;
+}
+.container
+{
+    position: relative;
+    margin-top: 100px;
+}
+
+@keyframes boomerang-movement
+{
+    0%
+    {
+        left: 0;
+        top: 0;
+    }
+    25%
+    {
+        top: -100px;
+    }
+    50%
+    {
+        left: 400px;
+    }
+    75%
+    {
+        top: 100px;
+    }
+    100%
+    {
+        left: 0;
+        top: 0;
+    }
+}
